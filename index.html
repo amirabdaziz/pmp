@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FAZ-CorrS Project Management Dashboard</title>
+<style>
+:root{--blue:#0078D4;--blue2:#0b5cab;--green:#16A34A;--amber:#F59E0B;--red:#DC2626;--bg:#FFFFFF;--card:#F5F7FA;--text:#172033;--muted:#657084;--line:#E2E8F0;--shadow:0 12px 30px rgba(15,23,42,.08);--radius:18px}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#f9fbff 0%,#fff 32%);font-family:"Segoe UI",Inter,Arial,sans-serif;color:var(--text)}.wrap{max-width:1440px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:22px}.brand{display:flex;gap:14px;align-items:center}.logo{width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,var(--blue),#56b6ff);box-shadow:var(--shadow);display:grid;place-items:center;color:white;font-weight:800}.eyebrow{color:var(--blue);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.12em}h1{margin:4px 0 6px;font-size:30px}.sub{color:var(--muted);font-size:14px}.actions{display:flex;gap:10px;flex-wrap:wrap}.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 14px;font-size:13px;box-shadow:0 6px 20px rgba(15,23,42,.05)}.grid{display:grid;gap:16px}.kpis{grid-template-columns:repeat(6,1fr)}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}.kpi .label{color:var(--muted);font-size:12px;font-weight:650}.kpi .value{font-size:28px;font-weight:800;margin-top:8px}.kpi .note{font-size:12px;color:var(--muted);margin-top:7px}.status-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;background:var(--green)}.main{grid-template-columns:1.45fr .85fr;margin-top:16px}.section-title{font-size:15px;font-weight:800;margin:0 0 14px;display:flex;align-items:center;justify-content:space-between}.tag{font-size:12px;color:var(--blue);background:#e8f3ff;border:1px solid #d0e8ff;border-radius:999px;padding:6px 10px}.gantt{display:grid;grid-template-columns:120px 1fr;gap:10px 12px;align-items:center}.months{grid-column:2;display:grid;grid-template-columns:repeat(6,1fr);font-size:11px;color:var(--muted);text-align:center}.barrow{display:contents}.phase{font-size:12px;color:#364152;font-weight:700}.track{height:22px;background:#edf2f7;border-radius:999px;position:relative;overflow:hidden}.bar{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--blue),#56b6ff)}.bar.current{background:linear-gradient(90deg,var(--amber),#ffd37a)}.bar.done{background:linear-gradient(90deg,var(--green),#83dd9b)}.here{position:absolute;left:47%;top:-5px;width:2px;height:32px;background:var(--red)}.chart svg{width:100%;height:230px;display:block}.progress-list{display:grid;gap:10px}.phase-progress{display:grid;grid-template-columns:1.2fr 2fr 54px;gap:12px;align-items:center;font-size:13px}.progress-bg{height:10px;background:#edf2f7;border-radius:99px;overflow:hidden}.progress-fill{height:100%;background:var(--blue);border-radius:99px}.modules{grid-template-columns:repeat(5,1fr);margin-top:16px}.module{padding:14px}.module h3{font-size:13px;margin:0 0 10px}.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin:6px 0}.badge{border-radius:999px;padding:5px 8px;font-size:11px;font-weight:700}.b-green{background:#dcfce7;color:#166534}.b-blue{background:#dbeafe;color:#1d4ed8}.b-amber{background:#fef3c7;color:#92400e}.b-red{background:#fee2e2;color:#991b1b}.kanban{grid-template-columns:repeat(4,1fr);margin-top:16px}.col{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;min-height:250px}.col h3{margin:0 0 12px;font-size:13px}.task{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px;margin-bottom:10px;box-shadow:0 8px 16px rgba(15,23,42,.05)}.task strong{font-size:12.5px}.task p{font-size:11px;color:var(--muted);margin:8px 0 0}.lower{grid-template-columns:1fr 1fr;margin-top:16px}.risk-table{width:100%;border-collapse:separate;border-spacing:0 8px;font-size:12px}.risk-table th{color:var(--muted);text-align:left;font-size:11px}.risk-table td{background:var(--card);padding:11px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.risk-table td:first-child{border-radius:12px 0 0 12px;border-left:1px solid var(--line)}.risk-table td:last-child{border-radius:0 12px 12px 0;border-right:1px solid var(--line)}.donuts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.donut{text-align:center;background:var(--card);border-radius:16px;padding:12px;border:1px solid var(--line)}.circle{--p:70;--c:var(--blue);width:78px;height:78px;margin:auto;border-radius:50%;background:conic-gradient(var(--c) calc(var(--p)*1%),#e5e7eb 0);display:grid;place-items:center}.circle span{background:white;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-size:13px;font-weight:800}.donut label{display:block;font-size:11px;color:var(--muted);margin-top:8px}.summary{margin-top:16px;background:linear-gradient(135deg,#fff,#f4faff);border-color:#cfe7ff}.summary p{font-size:13px;line-height:1.55;color:#394150}.milestones{display:flex;gap:10px;flex-wrap:wrap}.mile{background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:12px}.team{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.person{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}.avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#0078D4,#77c7ff);color:white;display:grid;place-items:center;font-weight:800;margin-bottom:8px}.util{display:grid;gap:11px}.util-row{display:grid;grid-template-columns:110px 1fr 36px;gap:10px;font-size:12px;align-items:center}@media(max-width:1100px){.kpis,.modules{grid-template-columns:repeat(3,1fr)}.main,.lower{grid-template-columns:1fr}.kanban{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.wrap{padding:16px}.top{flex-direction:column}.kpis,.modules,.kanban,.donuts,.team{grid-template-columns:1fr}.gantt{grid-template-columns:85px 1fr}.phase-progress{grid-template-columns:1fr}.lower{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><div class="logo">FC</div><div><div class="eyebrow">Executive PMO Dashboard</div><h1>FAZ-CorrS Application Project Management</h1><div class="sub">Weekly progress visibility for corrosion simulation software development, validation and UAT readiness.</div></div></div>
+    <div class="actions"><div class="pill">Prepared for Management Meeting</div><div class="pill">Current Phase: <b>Phase 3 Simulation Engine</b></div><div class="pill">Updated: <b>25 Jun 2026</b></div></div>
+  </div>
+
+  <div class="grid kpis">
+    <div class="card kpi"><div class="label">Overall Progress</div><div class="value">72%</div><div class="note">Actual vs planned: 40%</div></div>
+    <div class="card kpi"><div class="label">Health Status</div><div class="value" style="font-size:22px"><span class="status-dot"></span>On Track</div><div class="note">Minor validation risk</div></div>
+    <div class="card kpi"><div class="label">Remaining Tasks</div><div class="value">26</div><div class="note">Across modules & UAT</div></div>
+    <div class="card kpi"><div class="label">Open Issues</div><div class="value">4</div><div class="note">Calculation validation focus</div></div>
+    <div class="card kpi"><div class="label">Risks</div><div class="value">2</div><div class="note">Resource & schedule</div></div>
+    <div class="card kpi"><div class="label">Team Members</div><div class="value">3</div><div class="note">Mustaza, Najwa, Aimar</div></div>
+  </div>
+
+  <div class="grid main">
+    <div class="card"><div class="section-title">Project Timeline <span class="tag">Current: Phase 3</span></div>
+      <div class="gantt"><div></div><div class="months"><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span></div>
+        <div class="barrow"><div class="phase">P1 Core Dev</div><div class="track"><div class="bar done" style="width:20%"></div></div></div>
+        <div class="barrow"><div class="phase">P2 Inputs</div><div class="track"><div class="bar done" style="margin-left:16%;width:22%"></div></div></div>
+        <div class="barrow"><div class="phase">P3 Simulation</div><div class="track"><div class="bar current" style="margin-left:32%;width:22%"></div><div class="here"></div></div></div>
+        <div class="barrow"><div class="phase">P4 Visualisation</div><div class="track"><div class="bar" style="margin-left:50%;width:18%"></div></div></div>
+        <div class="barrow"><div class="phase">P5 Auth</div><div class="track"><div class="bar" style="margin-left:67%;width:16%"></div></div></div>
+        <div class="barrow"><div class="phase">P6 UAT</div><div class="track"><div class="bar" style="margin-left:80%;width:18%"></div></div></div>
+      </div>
+    </div>
+    <div class="card chart"><div class="section-title">Planned vs Actual Progress <span class="tag">Forecast 90%</span></div>
+      <svg viewBox="0 0 480 240" aria-label="progress chart">
+        <line x1="50" y1="190" x2="450" y2="190" stroke="#CBD5E1"/><line x1="50" y1="30" x2="50" y2="190" stroke="#CBD5E1"/>
+        <polyline points="50,174 116,158 182,126 248,94 314,62 380,46 446,30" fill="none" stroke="#0078D4" stroke-width="4"/>
+        <polyline points="50,174 116,158 182,142 248,126 314,110 380,96 446,86" fill="none" stroke="#16A34A" stroke-width="4" stroke-dasharray="8 6"/>
+        <polyline points="50,174 116,160 182,150 248,140 314,128 380,120 446,110" fill="none" stroke="#F59E0B" stroke-width="4"/>
+        <text x="52" y="218" font-size="12" fill="#657084">Apr</text><text x="182" y="218" font-size="12" fill="#657084">Jun</text><text x="314" y="218" font-size="12" fill="#657084">Aug</text><text x="420" y="218" font-size="12" fill="#657084">Sep</text>
+        <text x="310" y="54" font-size="12" fill="#0078D4">Planned</text><text x="310" y="102" font-size="12" fill="#16A34A">Forecast</text><text x="310" y="134" font-size="12" fill="#F59E0B">Actual</text>
+      </svg>
+    </div>
+  </div>
+
+  <div class="grid lower">
+    <div class="card"><div class="section-title">Phase Progress</div><div class="progress-list">
+      <div class="phase-progress"><b>Phase 1 Core Development</b><div class="progress-bg"><div class="progress-fill" style="width:100%;background:var(--green)"></div></div><b>100%</b></div>
+      <div class="phase-progress"><b>Phase 2 Input Modules</b><div class="progress-bg"><div class="progress-fill" style="width:88%;background:var(--green)"></div></div><b>88%</b></div>
+      <div class="phase-progress"><b>Phase 3 Simulation Engine</b><div class="progress-bg"><div class="progress-fill" style="width:73%;background:var(--amber)"></div></div><b>73%</b></div>
+      <div class="phase-progress"><b>Phase 4 Results & Visualization</b><div class="progress-bg"><div class="progress-fill" style="width:55%"></div></div><b>55%</b></div>
+      <div class="phase-progress"><b>Phase 5 Authentication</b><div class="progress-bg"><div class="progress-fill" style="width:20%"></div></div><b>20%</b></div>
+      <div class="phase-progress"><b>Phase 6 Testing & UAT</b><div class="progress-bg"><div class="progress-fill" style="width:10%;background:var(--red)"></div></div><b>10%</b></div>
+    </div></div>
+    <div class="card"><div class="section-title">Resource Utilization</div><div class="util">
+      <div class="util-row"><b>Development</b><div class="progress-bg"><div class="progress-fill" style="width:86%"></div></div><b>86%</b></div>
+      <div class="util-row"><b>UI</b><div class="progress-bg"><div class="progress-fill" style="width:74%"></div></div><b>74%</b></div>
+      <div class="util-row"><b>Backend</b><div class="progress-bg"><div class="progress-fill" style="width:82%"></div></div><b>82%</b></div>
+      <div class="util-row"><b>Testing</b><div class="progress-bg"><div class="progress-fill" style="width:48%;background:var(--amber)"></div></div><b>48%</b></div>
+      <div class="util-row"><b>Validation</b><div class="progress-bg"><div class="progress-fill" style="width:62%;background:var(--amber)"></div></div><b>62%</b></div>
+      <div class="util-row"><b>Docs</b><div class="progress-bg"><div class="progress-fill" style="width:35%"></div></div><b>35%</b></div>
+    </div></div>
+  </div>
+
+  <div class="grid modules">
+    <div class="card module"><h3>Dashboard</h3><span class="badge b-green">Completed</span><div class="meta"><span>Aimar</span><b>100%</b></div></div>
+    <div class="card module"><h3>Case Management</h3><span class="badge b-blue">In Review</span><div class="meta"><span>Mustaza</span><b>85%</b></div></div>
+    <div class="card module"><h3>General Input</h3><span class="badge b-green">Completed</span><div class="meta"><span>Najwa</span><b>95%</b></div></div>
+    <div class="card module"><h3>Flow</h3><span class="badge b-amber">Ongoing</span><div class="meta"><span>Najwa</span><b>72%</b></div></div>
+    <div class="card module"><h3>Condensation</h3><span class="badge b-amber">Ongoing</span><div class="meta"><span>Najwa</span><b>60%</b></div></div>
+    <div class="card module"><h3>Point Model</h3><span class="badge b-amber">Ongoing</span><div class="meta"><span>Mustaza</span><b>73%</b></div></div>
+    <div class="card module"><h3>Line Run</h3><span class="badge b-amber">Ongoing</span><div class="meta"><span>Mustaza</span><b>68%</b></div></div>
+    <div class="card module"><h3>Parametric Run</h3><span class="badge b-blue">Planned</span><div class="meta"><span>Mustaza</span><b>40%</b></div></div>
+    <div class="card module"><h3>Authentication</h3><span class="badge b-blue">Planned</span><div class="meta"><span>TBD</span><b>20%</b></div></div>
+    <div class="card module"><h3>3D Visualization</h3><span class="badge b-green">Advanced</span><div class="meta"><span>Aimar</span><b>80%</b></div></div>
+  </div>
+
+  <div class="card" style="margin-top:16px"><div class="section-title">Team Progress</div><div class="team">
+    <div class="person"><div class="avatar">M</div><b>Mustaza</b><p class="sub">Completed: CO₂ training case study slide. Ongoing: design review, legacy comparison, simulation logic verification.</p></div>
+    <div class="person"><div class="avatar">N</div><b>Najwa</b><p class="sub">Completed: simulation duration dropdown database. Ongoing: Flow calculation fixes, MultiCorp validation, calculation logic implementation.</p></div>
+    <div class="person"><div class="avatar">A</div><b>Aimar</b><p class="sub">Completed: UI update, button standardization, General/Dew Point corrosion visualisation. Next: MIC and Dry Gas visualization.</p></div>
+  </div></div>
+
+  <div class="grid kanban">
+    <div class="col"><h3>Backlog</h3><div class="task"><strong>Authentication Roles</strong><p>Priority: Medium · Owner: TBD · Due: Aug</p></div><div class="task"><strong>UAT Script Preparation</strong><p>Priority: Medium · Owner: PMO · Due: Sep</p></div></div>
+    <div class="col"><h3>In Progress</h3><div class="task"><strong>Flow Module Calculation Fix</strong><p>Priority: High · Owner: Najwa · Due: 25 Jun</p></div><div class="task"><strong>Line Run Integration</strong><p>Priority: High · Owner: Mustaza</p></div></div>
+    <div class="col"><h3>Under Review</h3><div class="task"><strong>MultiCorp Matching Validation</strong><p>Priority: Critical · Owner: Mustaza / Najwa</p></div><div class="task"><strong>3D Corrosion Thickness Mapping</strong><p>Priority: Medium · Owner: Aimar</p></div></div>
+    <div class="col"><h3>Completed</h3><div class="task"><strong>UI Refresh from Legacy System</strong><p>Priority: Medium · Owner: Aimar</p></div><div class="task"><strong>General Corrosion Visualization</strong><p>Priority: Medium · Owner: Aimar</p></div></div>
+  </div>
+
+  <div class="grid lower">
+    <div class="card"><div class="section-title">Risks & Issues</div><table class="risk-table"><thead><tr><th>Issue</th><th>Impact</th><th>Probability</th><th>Owner</th><th>Status</th></tr></thead><tbody><tr><td>Validation against legacy MultiCorp may take longer</td><td>High</td><td>Medium</td><td>PMO</td><td><span class="badge b-amber">Watch</span></td></tr><tr><td>Scope includes frontend, backend, database, testing, calculation logic</td><td>Medium</td><td>Medium</td><td>PM</td><td><span class="badge b-blue">Managed</span></td></tr><tr><td>Need additional C# developer support</td><td>High</td><td>Medium</td><td>Mgmt</td><td><span class="badge b-red">Action</span></td></tr></tbody></table></div>
+    <div class="card"><div class="section-title">Milestone Tracker</div><div class="milestones"><span class="mile">✓ Dashboard Completed</span><span class="mile">✓ UI Framework</span><span class="mile">✓ Input Modules</span><span class="mile">✓ Calculation Engine</span><span class="mile">✓ Visualization</span><span class="mile">⏳ Authentication</span><span class="mile">⏳ Testing</span><span class="mile">⏳ UAT</span><span class="mile">⏳ Production Deployment</span></div></div>
+  </div>
+
+  <div class="card" style="margin-top:16px"><div class="section-title">Corrosion Simulation Readiness</div><div class="donuts">
+    <div class="donut"><div class="circle" style="--p:90;--c:var(--green)"><span>90%</span></div><label>General Corrosion</label></div><div class="donut"><div class="circle" style="--p:78;--c:var(--blue)"><span>78%</span></div><label>CO₂ Corrosion</label></div><div class="donut"><div class="circle" style="--p:40;--c:var(--amber)"><span>40%</span></div><label>MIC</label></div><div class="donut"><div class="circle" style="--p:28;--c:var(--amber)"><span>28%</span></div><label>Oxygen Corrosion</label></div><div class="donut"><div class="circle" style="--p:25;--c:var(--amber)"><span>25%</span></div><label>Sand Erosion</label></div><div class="donut"><div class="circle" style="--p:25;--c:var(--amber)"><span>25%</span></div><label>Velocity Erosion</label></div><div class="donut"><div class="circle" style="--p:82;--c:var(--green)"><span>82%</span></div><label>Dew Point Corrosion</label></div><div class="donut"><div class="circle" style="--p:35;--c:var(--amber)"><span>35%</span></div><label>Dry Gas Corrosion</label></div>
+  </div></div>
+
+  <div class="card summary"><div class="section-title">AI Executive Summary <span class="tag">Recommended Actions</span></div><p><b>Overall health:</b> The project is progressing with a healthy development baseline, with core UI and early visualization capabilities substantially completed. The most important management focus is Phase 3 simulation accuracy, especially matching calculation outputs against the legacy MultiCorp reference. <b>Key risk:</b> calculation validation may extend the timeline because the scope spans frontend, backend, database, calculation logic, testing, and validation. <b>Recommendation:</b> add one C# developer or calculation-focused support resource to accelerate parallel development and reduce bottlenecks before Authentication, Testing, and UAT phases begin.</p></div>
+</div>
+</body>
+</html>
