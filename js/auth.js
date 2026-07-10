@@ -1,48 +1,45 @@
-const ACCOUNTS = {
-  admin: { password: 'Admin@123', name: 'Administrator', role: 'System Administrator' },
-  amir: { password: 'Amir@123', name: 'Amir Abd Aziz', role: 'Project Manager' },
-  mustaza: { password: 'Mustaza@123', name: 'Mustaza', role: 'Product Engineer' },
-  najwa: { password: 'Najwa@123', name: 'Najwa', role: 'Software Engineer' },
-  aimar: { password: 'Aimar@123', name: 'Aimar', role: 'UI/UX Developer' },
-  management: { password: 'Mgmt@123', name: 'Management Viewer', role: 'Executive Viewer' }
+
+const accounts = {
+  admin: { password: "Admin@123", name: "Administrator", role: "Administrator", avatar: "AD" },
+  amir: { password: "Amir@123", name: "Amir Abd Aziz", role: "Project Manager", avatar: "AA" },
+  mustaza: { password: "Mustaza@123", name: "Mustaza", role: "Product Engineer", avatar: "MU" },
+  najwa: { password: "Najwa@123", name: "Najwa", role: "Software Engineer", avatar: "NJ" },
+  aimar: { password: "Aimar@123", name: "Aimar", role: "UI/UX Developer", avatar: "AI" },
+  management: { password: "Mgmt@123", name: "Management Viewer", role: "Executive", avatar: "MG" }
 };
 
 function login() {
-  const username = document.getElementById('loginUser').value.trim().toLowerCase();
-  const password = document.getElementById('loginPass').value;
-  const user = ACCOUNTS[username];
+  const username = document.getElementById("loginUser").value.trim().toLowerCase();
+  const password = document.getElementById("loginPass").value;
 
-  if (!user || user.password !== password) {
-    document.getElementById('loginError').classList.remove('hidden');
+  if (accounts[username] && accounts[username].password === password) {
+    localStorage.setItem("fazcorrs_current_user", JSON.stringify({ username, ...accounts[username] }));
+    window.location.href = "dashboard.html";
     return;
   }
 
-  localStorage.setItem('fazcorrs_user', JSON.stringify({ username, name: user.name, role: user.role }));
-  window.location.href = 'dashboard.html';
+  document.getElementById("loginError").classList.remove("hidden");
+}
+
+function requireLogin() {
+  const user = JSON.parse(localStorage.getItem("fazcorrs_current_user") || "null");
+  if (!user) {
+    window.location.href = "login.html";
+    return null;
+  }
+
+  const sideUser = document.getElementById("sideUser");
+  const sideRole = document.getElementById("sideRole");
+  const topAvatar = document.getElementById("topAvatar");
+
+  if (sideUser) sideUser.textContent = user.name;
+  if (sideRole) sideRole.textContent = user.role;
+  if (topAvatar) topAvatar.textContent = user.avatar;
+
+  return user;
 }
 
 function logout() {
-  localStorage.removeItem('fazcorrs_user');
-  window.location.href = 'login.html';
+  localStorage.removeItem("fazcorrs_current_user");
+  window.location.href = "login.html";
 }
-
-function getCurrentUser() {
-  return JSON.parse(localStorage.getItem('fazcorrs_user') || 'null');
-}
-
-function requireAuth() {
-  if (!getCurrentUser()) window.location.href = 'login.html';
-}
-
-function hydrateUser() {
-  const user = getCurrentUser();
-  if (!user) return;
-  const name = document.getElementById('currentUserName');
-  const role = document.getElementById('currentUserRole');
-  if (name) name.textContent = user.name;
-  if (role) role.textContent = user.role;
-}
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Enter' && document.getElementById('loginUser')) login();
-});
