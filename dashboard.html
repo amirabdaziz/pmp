@@ -1,1 +1,79 @@
-Place screenshots and product images here. Keep this folder as a folder, not a file.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | FAZ-CorrS PMO</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="side-brand">
+        <div class="brand-logo small-logo">FC</div>
+        <div>
+          <strong>FAZ-CorrS</strong>
+          <span>PMO Workspace</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="active">🏠 Dashboard</button>
+        <button>✅ Tasks</button>
+        <button>📋 Board</button>
+        <button>📅 Timeline</button>
+        <button>👥 Team</button>
+        <button>🏁 Milestones</button>
+        <button>⚠️ Risks</button>
+        <button>📊 Reports</button>
+      </nav>
+
+      <div class="user-panel">
+        <span>Logged in as</span>
+        <b id="currentUserName">-</b>
+        <small id="currentUserRole">-</small>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1>Project Dashboard</h1>
+          <p>Executive visibility for FAZ-CorrS application development</p>
+        </div>
+        <button class="secondary-btn" onclick="logout()">Logout</button>
+      </header>
+
+      <section class="kpi-grid">
+        <article class="card"><span>Overall Progress</span><h2>72%</h2><p>Excel tracker baseline</p></article>
+        <article class="card"><span>Health</span><h2>🟢 On Track</h2><p>PMO status</p></article>
+        <article class="card"><span>Current Phase</span><h2>Phase 3</h2><p>Simulation logic</p></article>
+        <article class="card"><span>Open Tasks</span><h2>26</h2><p>Pending and ongoing</p></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="card wide-card">
+          <h2>Executive Summary</h2>
+          <p>FAZ-CorrS is currently progressing through simulation logic development, including calculation validation, line run, parametric run, and visualization readiness.</p>
+          <p><b>Recommended action:</b> prioritise backend/C# support and prepare validation test cases before UAT.</p>
+        </article>
+        <article class="card">
+          <h2>Upcoming Activities</h2>
+          <ul>
+            <li>Complete Flow calculation checks</li>
+            <li>Continue Line Run implementation</li>
+            <li>Prepare Parametric Run validation</li>
+            <li>Start authentication planning</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script>
+    requireAuth();
+    hydrateUser();
+  </script>
+</body>
+</html>
