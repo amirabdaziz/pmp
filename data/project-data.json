@@ -1,1 +1,506 @@
 
+{
+  "project": {
+    "name": "FAZ-CorrS Application Development",
+    "source": "FAZ-CorrS Progress Update Excel Tracker",
+    "manager": "Amir Abd Aziz",
+    "owner": "Mustaza",
+    "currentSprint": "Sprint 12",
+    "currentPhase": "Phase 3 - Simulation Logic Development",
+    "progress": 72,
+    "health": "On Track",
+    "plannedFinish": "30 September 2026"
+  },
+  "tasks": [
+    {
+      "id": "T-001",
+      "phaseNo": "Phase 1",
+      "phase": "Project Structure",
+      "scope": "Dashboard",
+      "task": "Created dashboard layout and navigation",
+      "frontEnd": "Completed",
+      "backEnd": "N/A",
+      "corrsimEngine": "N/A",
+      "owner": "Aimar",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "Foundation completed"
+    },
+    {
+      "id": "T-002",
+      "phaseNo": "Phase 1",
+      "phase": "Project Structure",
+      "scope": "Cases",
+      "task": "Initialized case module, routing and CRUD structure",
+      "frontEnd": "Completed",
+      "backEnd": "N/A",
+      "corrsimEngine": "N/A",
+      "owner": "Aimar",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "Case structure ready"
+    },
+    {
+      "id": "T-003",
+      "phaseNo": "Phase 1",
+      "phase": "Project Structure",
+      "scope": "Composition",
+      "task": "Designed composition page and input forms",
+      "frontEnd": "Completed",
+      "backEnd": "Pending",
+      "corrsimEngine": "N/A",
+      "owner": "Najwa",
+      "priority": "High",
+      "progress": 80,
+      "status": "In Progress",
+      "remarks": "Backend connection pending"
+    },
+    {
+      "id": "T-004",
+      "phaseNo": "Phase 1",
+      "phase": "Project Structure",
+      "scope": "Flow",
+      "task": "Created flow input interface",
+      "frontEnd": "Completed",
+      "backEnd": "In Progress",
+      "corrsimEngine": "In Progress",
+      "owner": "Najwa",
+      "priority": "Critical",
+      "progress": 70,
+      "status": "In Progress",
+      "remarks": "Calculation validation ongoing"
+    },
+    {
+      "id": "T-005",
+      "phaseNo": "Phase 1",
+      "phase": "Project Structure",
+      "scope": "Condensation",
+      "task": "Prepared condensation module interface",
+      "frontEnd": "Completed",
+      "backEnd": "Pending",
+      "corrsimEngine": "Pending",
+      "owner": "Najwa",
+      "priority": "Medium",
+      "progress": 55,
+      "status": "In Progress",
+      "remarks": "Calculation logic pending"
+    },
+    {
+      "id": "T-006",
+      "phaseNo": "Phase 1",
+      "phase": "Project Structure",
+      "scope": "Pipeline",
+      "task": "Developed pipeline configuration page",
+      "frontEnd": "Completed",
+      "backEnd": "Pending",
+      "corrsimEngine": "Pending",
+      "owner": "Najwa",
+      "priority": "Medium",
+      "progress": 65,
+      "status": "In Progress",
+      "remarks": "Input validation required"
+    },
+    {
+      "id": "T-007",
+      "phaseNo": "Phase 2",
+      "phase": "Simulation Logic",
+      "scope": "Point Model",
+      "task": "Implement point model calculation logic",
+      "frontEnd": "Completed",
+      "backEnd": "In Progress",
+      "corrsimEngine": "In Progress",
+      "owner": "Mustaza",
+      "priority": "Critical",
+      "progress": 82,
+      "status": "In Progress",
+      "remarks": "Validation against MultiCorp"
+    },
+    {
+      "id": "T-008",
+      "phaseNo": "Phase 2",
+      "phase": "Simulation Logic",
+      "scope": "Line Run",
+      "task": "Implement line run simulation workflow",
+      "frontEnd": "Pending",
+      "backEnd": "In Progress",
+      "corrsimEngine": "In Progress",
+      "owner": "Mustaza",
+      "priority": "High",
+      "progress": 48,
+      "status": "Backlog",
+      "remarks": "Next focus area"
+    },
+    {
+      "id": "T-009",
+      "phaseNo": "Phase 2",
+      "phase": "Simulation Logic",
+      "scope": "Parametric Run",
+      "task": "Implement parametric simulation workflow",
+      "frontEnd": "Pending",
+      "backEnd": "In Progress",
+      "corrsimEngine": "In Progress",
+      "owner": "Mustaza",
+      "priority": "High",
+      "progress": 42,
+      "status": "Backlog",
+      "remarks": "Next focus area"
+    },
+    {
+      "id": "T-010",
+      "phaseNo": "Phase 3",
+      "phase": "Visualization",
+      "scope": "General Corrosion",
+      "task": "Completed 3D visualization for General Corrosion",
+      "frontEnd": "Completed",
+      "backEnd": "N/A",
+      "corrsimEngine": "Completed",
+      "owner": "Aimar",
+      "priority": "High",
+      "progress": 100,
+      "status": "Completed",
+      "remarks": "Completed"
+    },
+    {
+      "id": "T-011",
+      "phaseNo": "Phase 3",
+      "phase": "Visualization",
+      "scope": "Dew Point Corrosion",
+      "task": "Developed Dew Point Corrosion 3D visualization",
+      "frontEnd": "Completed",
+      "backEnd": "N/A",
+      "corrsimEngine": "In Progress",
+      "owner": "Aimar",
+      "priority": "Medium",
+      "progress": 78,
+      "status": "In Progress",
+      "remarks": "Visualization completed, engine pending"
+    },
+    {
+      "id": "T-012",
+      "phaseNo": "Phase 3",
+      "phase": "Visualization",
+      "scope": "MIC",
+      "task": "Develop MIC corrosion 3D visualization",
+      "frontEnd": "Backlog",
+      "backEnd": "N/A",
+      "corrsimEngine": "Pending",
+      "owner": "Aimar",
+      "priority": "Medium",
+      "progress": 35,
+      "status": "Backlog",
+      "remarks": "Next week"
+    },
+    {
+      "id": "T-013",
+      "phaseNo": "Phase 3",
+      "phase": "Visualization",
+      "scope": "Dry Gas Corrosion",
+      "task": "Develop Dry Gas corrosion 3D visualization",
+      "frontEnd": "Backlog",
+      "backEnd": "N/A",
+      "corrsimEngine": "Pending",
+      "owner": "Aimar",
+      "priority": "Medium",
+      "progress": 25,
+      "status": "Backlog",
+      "remarks": "Next week"
+    },
+    {
+      "id": "T-014",
+      "phaseNo": "Phase 4",
+      "phase": "Authentication",
+      "scope": "Microsoft Login",
+      "task": "Implement Microsoft login and role access control",
+      "frontEnd": "Pending",
+      "backEnd": "Pending",
+      "corrsimEngine": "N/A",
+      "owner": "Backend Team",
+      "priority": "High",
+      "progress": 10,
+      "status": "Not Started",
+      "remarks": "Phase 5"
+    },
+    {
+      "id": "T-015",
+      "phaseNo": "Phase 5",
+      "phase": "Testing & UAT",
+      "scope": "Validation",
+      "task": "Prepare validation test matrix against MultiCorp",
+      "frontEnd": "N/A",
+      "backEnd": "Pending",
+      "corrsimEngine": "Pending",
+      "owner": "QA Tester",
+      "priority": "High",
+      "progress": 5,
+      "status": "Not Started",
+      "remarks": "To start before UAT"
+    }
+  ],
+  "risks": [
+    {
+      "issue": "Calculation validation against legacy MultiCorp may take longer than expected",
+      "impact": "High",
+      "probability": "Medium",
+      "owner": "Mustaza",
+      "mitigation": "Daily comparison and additional reviewer",
+      "status": "Open"
+    },
+    {
+      "issue": "Scope covers frontend, backend, database, calculation logic, testing and validation",
+      "impact": "High",
+      "probability": "High",
+      "owner": "Amir",
+      "mitigation": "Prioritize scope and freeze changes before UAT",
+      "status": "Monitoring"
+    },
+    {
+      "issue": "Resource bottleneck for backend/C# development",
+      "impact": "High",
+      "probability": "Medium",
+      "owner": "Amir",
+      "mitigation": "Approve additional C# developer support",
+      "status": "Open"
+    }
+  ],
+  "upcoming": [
+    {
+      "period": "This Week",
+      "activity": "Complete Flow calculation checks and simulation duration database."
+    },
+    {
+      "period": "Next Week",
+      "activity": "Continue Line Run and Parametric Run implementation."
+    },
+    {
+      "period": "Next Sprint",
+      "activity": "Start Results page, charts, visualization backend and authentication preparation."
+    },
+    {
+      "period": "Upcoming Deliverable",
+      "activity": "Full calculation logic integration and validation against MultiCorp."
+    }
+  ],
+  "phases": [
+    {
+      "phaseNo": "Phase 1",
+      "name": "Project Structure",
+      "total": 6,
+      "completed": 2,
+      "progress": 78,
+      "status": "In Progress",
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+    },
+    {
+      "phaseNo": "Phase 2",
+      "name": "Simulation Logic",
+      "total": 3,
+      "completed": 0,
+      "progress": 57,
+      "status": "In Progress",
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+    },
+    {
+      "phaseNo": "Phase 3",
+      "name": "Visualization",
+      "total": 4,
+      "completed": 1,
+      "progress": 60,
+      "status": "In Progress",
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+    },
+    {
+      "phaseNo": "Phase 4",
+      "name": "Authentication",
+      "total": 1,
+      "completed": 0,
+      "progress": 10,
+      "status": "In Progress",
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+    },
+    {
+      "phaseNo": "Phase 5",
+      "name": "Testing & UAT",
+      "total": 1,
+      "completed": 0,
+      "progress": 5,
+      "status": "In Progress",
+      "start": "2026-04-01",
+      "end": "2026-09-30"
+    }
+  ],
+  "team": [
+    {
+      "name": "Aimar",
+      "role": "Project Team",
+      "tasks": 6,
+      "completed": 3,
+      "ongoing": 1,
+      "backlog": 2,
+      "progress": 73
+    },
+    {
+      "name": "Backend Team",
+      "role": "Project Team",
+      "tasks": 1,
+      "completed": 0,
+      "ongoing": 0,
+      "backlog": 1,
+      "progress": 10
+    },
+    {
+      "name": "Mustaza",
+      "role": "Project Team",
+      "tasks": 3,
+      "completed": 0,
+      "ongoing": 1,
+      "backlog": 2,
+      "progress": 57
+    },
+    {
+      "name": "Najwa",
+      "role": "Project Team",
+      "tasks": 4,
+      "completed": 0,
+      "ongoing": 4,
+      "backlog": 0,
+      "progress": 68
+    },
+    {
+      "name": "QA Tester",
+      "role": "Project Team",
+      "tasks": 1,
+      "completed": 0,
+      "ongoing": 0,
+      "backlog": 1,
+      "progress": 5
+    }
+  ],
+  "modules": [
+    {
+      "name": "Cases",
+      "owner": "Aimar",
+      "total": 1,
+      "completed": 1,
+      "progress": 100,
+      "status": "Completed"
+    },
+    {
+      "name": "Composition",
+      "owner": "Najwa",
+      "total": 1,
+      "completed": 0,
+      "progress": 80,
+      "status": "In Progress"
+    },
+    {
+      "name": "Condensation",
+      "owner": "Najwa",
+      "total": 1,
+      "completed": 0,
+      "progress": 55,
+      "status": "In Progress"
+    },
+    {
+      "name": "Dashboard",
+      "owner": "Aimar",
+      "total": 1,
+      "completed": 1,
+      "progress": 100,
+      "status": "Completed"
+    },
+    {
+      "name": "Dew Point Corrosion",
+      "owner": "Aimar",
+      "total": 1,
+      "completed": 0,
+      "progress": 78,
+      "status": "In Progress"
+    },
+    {
+      "name": "Dry Gas Corrosion",
+      "owner": "Aimar",
+      "total": 1,
+      "completed": 0,
+      "progress": 25,
+      "status": "In Progress"
+    },
+    {
+      "name": "Flow",
+      "owner": "Najwa",
+      "total": 1,
+      "completed": 0,
+      "progress": 70,
+      "status": "In Progress"
+    },
+    {
+      "name": "General Corrosion",
+      "owner": "Aimar",
+      "total": 1,
+      "completed": 1,
+      "progress": 100,
+      "status": "Completed"
+    },
+    {
+      "name": "Line Run",
+      "owner": "Mustaza",
+      "total": 1,
+      "completed": 0,
+      "progress": 48,
+      "status": "In Progress"
+    },
+    {
+      "name": "MIC",
+      "owner": "Aimar",
+      "total": 1,
+      "completed": 0,
+      "progress": 35,
+      "status": "In Progress"
+    },
+    {
+      "name": "Microsoft Login",
+      "owner": "Backend Team",
+      "total": 1,
+      "completed": 0,
+      "progress": 10,
+      "status": "In Progress"
+    },
+    {
+      "name": "Parametric Run",
+      "owner": "Mustaza",
+      "total": 1,
+      "completed": 0,
+      "progress": 42,
+      "status": "In Progress"
+    },
+    {
+      "name": "Pipeline",
+      "owner": "Najwa",
+      "total": 1,
+      "completed": 0,
+      "progress": 65,
+      "status": "In Progress"
+    },
+    {
+      "name": "Point Model",
+      "owner": "Mustaza",
+      "total": 1,
+      "completed": 0,
+      "progress": 82,
+      "status": "In Progress"
+    },
+    {
+      "name": "Validation",
+      "owner": "QA Tester",
+      "total": 1,
+      "completed": 0,
+      "progress": 5,
+      "status": "In Progress"
+    }
+  ]
+}
