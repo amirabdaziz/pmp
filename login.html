@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | FAZ-CorrS PMO</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="login-body">
+  <main class="login-shell">
+    <section class="login-hero">
+      <div class="brand-row">
+        <div class="brand-logo">FC</div>
+        <div>
+          <h1>FAZ-CorrS PMO</h1>
+          <p>ClickUp-style project management workspace</p>
+        </div>
+      </div>
+      <h2>Track application progress from one executive dashboard.</h2>
+      <p class="hero-text">Manage tasks, phases, team workload, milestones, risks, and reports for the FAZ-CorrS corrosion simulation platform.</p>
+      <div class="hero-pills">
+        <span>Dashboard</span><span>Tasks</span><span>Kanban</span><span>Timeline</span><span>Team</span><span>Reports</span>
+      </div>
+    </section>
 
+    <section class="login-card">
+      <h2>Sign in</h2>
+      <p class="muted">Use the demo account to continue.</p>
+      <label>Username</label>
+      <input id="loginUser" type="text" placeholder="admin" autocomplete="username" />
+      <label>Password</label>
+      <input id="loginPass" type="password" placeholder="Admin@123" autocomplete="current-password" />
+      <button class="primary-btn" onclick="login()">Login</button>
+      <p id="loginError" class="error hidden">Invalid username or password.</p>
+      <div class="demo-box">
+        <b>Demo accounts</b><br />
+        admin / Admin@123<br />
+        amir / Amir@123<br />
+        management / Mgmt@123
+      </div>
+    </section>
+  </main>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

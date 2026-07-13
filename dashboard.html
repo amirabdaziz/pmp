@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAZ-CorrS Dashboard</title>
+  <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/phase2-additions.css"/>
+  <link rel="stylesheet" href="css/phase3-clickup.css">
+</head>
+<body onload="requireLogin()">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">FC</div>
+      <h2>FAZ-CorrS</h2>
+      <p>PMO Workspace</p>
+      <nav id="nav"></nav>
+      <div class="user-box">
+        <small>Logged in as</small>
+        <b id="sideUser">-</b>
+        <span id="sideRole">-</span>
+      </div>
+    </aside>
 
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p>Excel-driven project management workspace</p>
+        </div>
+        <div class="top-actions">
+          <span id="topAvatar" class="avatar">A</span>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </header>
+
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/phase3-features.js"></script>
+</body>
+</html>

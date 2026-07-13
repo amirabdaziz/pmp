@@ -1,0 +1,14 @@
+# FAZ-CorrS PMO Workspace
+
+GitHub Pages-ready ClickUp-style project management app generated from the Excel tracker.
+
+## Deploy
+1. Upload all extracted files to the root of your `feature/clickup-rebuild` branch.
+2. Do not upload the ZIP file itself.
+3. Ensure `css`, `js`, `data`, `assets`, and `images` are folders.
+4. In GitHub Pages, use branch `feature/clickup-rebuild` and folder `/ (root)`.
+
+## Login
+- admin / Admin@123
+- amir / Amir@123
+- management / Mgmt@123
